@@ -1,0 +1,282 @@
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-butter: var(--butter);
+  --color-sunshine: var(--sunshine);
+  --color-rose: var(--rose);
+  --color-blush: var(--blush);
+  --color-coral: var(--coral);
+  --color-plum: var(--plum);
+  --color-ink: var(--ink);
+}
+
+/* UDGOSH 4.0 — Warm light festival design system */
+:root {
+  --radius: 1rem;
+  --ivory: #fff8f0;
+  --cream: #fff1e0;
+  --butter: #ffe8a3;
+  --sunshine: #f5c518;
+  --rose: #f23a8a;
+  --blush: #ffd6e8;
+  --coral: #ff8a65;
+  --plum: #3d2438;
+  --ink: #2a1f2d;
+
+  --background: #fff8f0;
+  --foreground: #2a1f2d;
+  --card: #ffffff;
+  --card-foreground: #2a1f2d;
+  --popover: #ffffff;
+  --popover-foreground: #2a1f2d;
+  --primary: #f5c518;
+  --primary-foreground: #2a1f2d;
+  --secondary: #ffe8a3;
+  --secondary-foreground: #2a1f2d;
+  --muted: #f5ede3;
+  --muted-foreground: #6b5560;
+  --accent: #f23a8a;
+  --accent-foreground: #ffffff;
+  --destructive: #d64545;
+  --border: #ead9c8;
+  --input: #ead9c8;
+  --ring: #f23a8a;
+  --chart-1: #f5c518;
+  --chart-2: #f23a8a;
+  --chart-3: #ff8a65;
+  --chart-4: #ffe8a3;
+  --chart-5: #3d2438;
+  --sidebar: #fff8f0;
+  --sidebar-foreground: #2a1f2d;
+  --sidebar-primary: #f5c518;
+  --sidebar-primary-foreground: #2a1f2d;
+  --sidebar-accent: #ffd6e8;
+  --sidebar-accent-foreground: #2a1f2d;
+  --sidebar-border: #ead9c8;
+  --sidebar-ring: #f23a8a;
+}
+
+.dark {
+  --background: #fff8f0;
+  --foreground: #2a1f2d;
+  --card: #ffffff;
+  --card-foreground: #2a1f2d;
+  --popover: #ffffff;
+  --popover-foreground: #2a1f2d;
+  --primary: #f5c518;
+  --primary-foreground: #2a1f2d;
+  --secondary: #ffe8a3;
+  --secondary-foreground: #2a1f2d;
+  --muted: #f5ede3;
+  --muted-foreground: #6b5560;
+  --accent: #f23a8a;
+  --accent-foreground: #ffffff;
+  --destructive: #d64545;
+  --border: #ead9c8;
+  --input: #ead9c8;
+  --ring: #f23a8a;
+  --chart-1: #f5c518;
+  --chart-2: #f23a8a;
+  --chart-3: #ff8a65;
+  --chart-4: #ffe8a3;
+  --chart-5: #3d2438;
+  --sidebar: #fff8f0;
+  --sidebar-foreground: #2a1f2d;
+  --sidebar-primary: #f5c518;
+  --sidebar-primary-foreground: #2a1f2d;
+  --sidebar-accent: #ffd6e8;
+  --sidebar-accent-foreground: #2a1f2d;
+  --sidebar-border: #ead9c8;
+  --sidebar-ring: #f23a8a;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 0% 0%, rgba(245, 197, 24, 0.12), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 100% 10%, rgba(242, 58, 138, 0.08), transparent 50%),
+      radial-gradient(ellipse 50% 30% at 50% 100%, rgba(255, 138, 101, 0.08), transparent 45%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: rgba(242, 58, 138, 0.22);
+    color: #2a1f2d;
+  }
+}
+
+@layer utilities {
+  .fest-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .fest-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  /* Animation utility classes — keyframes defined below at global scope */
+  .fest-marquee {
+    animation: fest-marquee 28s linear infinite;
+  }
+
+  .fest-cta-pulse {
+    animation: fest-cta-pulse 1.35s ease-in-out infinite;
+    will-change: transform, box-shadow;
+  }
+
+  .fest-badge-launch {
+    animation: fest-badge-launch 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    transform-origin: 20% 80%;
+    will-change: transform, box-shadow;
+  }
+
+  .fest-firework {
+    animation: fest-firework-burst 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    will-change: transform, opacity;
+  }
+
+  .fest-sparkle {
+    animation: fest-sparkle-twinkle 1.8s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+}
+
+/* ==========================================================================
+   Global @keyframes — defined outside @layer for 100% cross-browser support.
+   Chrome, Firefox, Safari all reliably pick these up at the document level.
+   ========================================================================== */
+@keyframes fest-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes fest-cta-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 6px 0 0 #b51a5e, 0 0 0 0 rgba(242, 58, 138, 0);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 8px 0 0 #b51a5e, 0 0 22px 5px rgba(242, 58, 138, 0.38);
+  }
+}
+
+@keyframes fest-badge-launch {
+  0%, 68%, 100% {
+    transform: rotate(-2.5deg) scale(1) translate(0, 0);
+    box-shadow: 0 8px 20px -4px rgba(242, 58, 138, 0.42), 0 3px 0 0 #911249;
+  }
+  72% { transform: rotate(-8deg) scale(0.92) translate(-2px, 3px); }
+  78% {
+    transform: rotate(5deg) scale(1.15) translate(4px, -8px);
+    box-shadow: 0 16px 32px -4px rgba(242, 58, 138, 0.65), 0 0 22px 3px rgba(245, 197, 24, 0.6), 0 4px 0 0 #911249;
+  }
+  84% { transform: rotate(-4.5deg) scale(0.97) translate(-1px, 2px); }
+  90% { transform: rotate(-1.5deg) scale(1.03) translate(1px, -1px); }
+  96% {
+    transform: rotate(-2.5deg) scale(1) translate(0, 0);
+    box-shadow: 0 8px 20px -4px rgba(242, 58, 138, 0.42), 0 3px 0 0 #911249;
+  }
+}
+
+/* SVG rotor spin — used via inline style animation on <g> elements */
+@keyframes rotorSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes sheenSweep {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(200%); }
+}
+
+@keyframes fest-firework-burst {
+  0%   { transform: scale(0.08); opacity: 0; }
+  15%  { opacity: 0.95; }
+  50%  { transform: scale(1); opacity: 0.85; }
+  85%  { transform: scale(1.18); opacity: 0.15; }
+  100% { transform: scale(1.22); opacity: 0; }
+}
+
+@keyframes fest-sparkle-twinkle {
+  0%, 100% { transform: scale(0.3) rotate(0deg); opacity: 0.1; }
+  50%       { transform: scale(1.2) rotate(45deg); opacity: 0.95; }
+}
