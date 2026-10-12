@@ -584,10 +584,10 @@ export default function DroneBannerAnimation({
   return (
     <span
       ref={containerRef}
-      className="relative inline-block align-middle ml-2 sm:ml-3 select-none"
+      className="relative inline-block align-middle ml-3.5 sm:ml-3 select-none"
       style={{
         verticalAlign: "middle",
-        width: coords.isMobile ? 66 : 78,
+        width: coords.isMobile ? 74 : 78,
         height: coords.isMobile ? 96 : 114,
       }}
     >

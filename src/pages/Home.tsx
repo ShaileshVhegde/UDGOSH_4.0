@@ -120,7 +120,7 @@ export default function Home() {
                   </svg>
                 </motion.div>
 
-                <h1 className="font-display text-[3.25rem] font-extrabold leading-[0.92] tracking-[-0.035em] sm:text-7xl lg:text-8xl">
+                <h1 className="font-display text-[3.75rem] font-extrabold leading-[0.92] tracking-[-0.04em] sm:text-7xl lg:text-8xl">
                   <span className="relative inline-block">
                     {/* Subtle warm sunshine-yellow and pink lighting effect glow behind wordmark */}
                     <span
